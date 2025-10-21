@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Local Background Image</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js"></script>
 </head>
 <body class="m-0 p-0 ">
+
 
     <!--header heseg-->
   <header class="absolute z-10 w-full h-20 flex justify-between  items-center  px-6">
@@ -19,6 +22,7 @@
     </div> 
   <button class="px-6 py-2 bg-red-400 rounded-full text-white hover:bg-red-500 hover:rounded-full hover:text-gray-500  ">sign in </button>
 </header>
+
      <!--gol heseg-->
   <div class="relative w-full h-screen bg-center bg-cover flex p-8 opacity-90 items-center"
    style="background-image:url('tokyo.jpg') ;">
@@ -40,11 +44,26 @@
     <button class="px-14 py-2 bg-red-400 rounded-full text-white hover:bg-red-500 hover:rounded-full hover:text-gray-500 ">try</button>
     </div>
     </div>
+     <!--burtguuleh hesg--> 
+      <div id="loginBox" class="p-8 bg-black bg-opacity-90 rounded-2xl shadow-xl">
+    <div class="flex items-start justify-center">
+      <h2 class="text-red-500 font-bold mb-8 text-xl">Hello World</h2>
+    </div>
+    <form id="burtguuleh" class="flex flex-col space-y-4">
+      <input type="text" placeholder="Username" id="ner" class="p-2 bg-gray-500 border border-gray-400 rounded">
+      <input type="password" placeholder="Password" id="pass" class="p-2 bg-gray-500 border border-gray-400 rounded">
+      <input type="email" placeholder="Email" id="email" class="p-2 bg-gray-500  border border-gray-400 rounded">
+      <button type="submit" class="p-2 mt-4 bg-red-500 text-black font-semibold rounded-xl hover:bg-green-500">
+        Log in
+      </button>
+    </form>
+  </div>
 
-
+<!-- zurag heseg-->
 <div class="w-1/2 flex justify-center items-center "><img src="3dmodel.png" alt=""></div>
 
     </div>
+    <script src="script.js"></script>
     
 </body>
 </html>

@@ -1,0 +1,41 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log in Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body >
+  <div class="h-screen w-screen flex justify-center items-center bg-red-400 bg-opacity-60 backdrop-blur-md">
+    <div id="loginBox" class="p-8 bg-white rounded-2xl shadow-xl">
+    <div class="flex items-start justify-center">
+      <h2 class="text-black font-bold mb-8 text-xl">Hello World</h2>
+    </div>
+    <form id="burtguuleh" class="flex flex-col space-y-4">
+      <input type="text" placeholder="Username" id="ner" class="p-2 border border-gray-400 rounded">
+      <input type="password" placeholder="Password" id="pass" class="p-2 border border-gray-400 rounded">
+      <input type="email" placeholder="Email" id="email" class="p-2 border border-gray-400 rounded">
+      <button type="submit" class="p-2 mt-4 bg-green-400 text-black font-semibold rounded-xl hover:bg-green-500">
+        Log in
+      </button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("burtguuleh").addEventListener("submit", function(e) {
+      e.preventDefault(); // form шинэчлэхгүй байлгах
+      const name = document.getElementById("ner").value.trim();
+      const pass = document.getElementById("pass").value.trim();
+      const email = document.getElementById("email").value.trim();
+
+      if (name && pass && email) {
+        // бүх талбар бөглөгдсөн бол form-ийг устгах
+        document.getElementById("loginBox").remove();
+        alert("Амжилттай нэвтэрлээ!");
+      } else {
+        alert("Бүх талбарыг бөглөнө үү!");
+      }
+    });
+  </script>
+</div>
