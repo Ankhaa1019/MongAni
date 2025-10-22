@@ -40,24 +40,36 @@
     <p>Saepe, fugiat amet</p>
     </div>
     <div class="flex  gap-8">
-    <button class="px-12 py-2 bg-red-400 rounded-full text-white hover:bg-red-500 hover:rounded-full hover:text-gray-500 ">log in</button>
+    <button onclick="showlogin ()"   class="px-12 py-2 bg-red-400 rounded-full text-white hover:bg-red-500 hover:rounded-full hover:text-gray-500 ">log in</button>
     <button class="px-14 py-2 bg-red-400 rounded-full text-white hover:bg-red-500 hover:rounded-full hover:text-gray-500 ">try</button>
     </div>
     </div>
-     <!--burtguuleh hesg--> 
-      <div id="loginBox" class="p-8 bg-black bg-opacity-90 rounded-2xl shadow-xl">
-    <div class="flex items-start justify-center">
-      <h2 class="text-red-500 font-bold mb-8 text-xl">Hello World</h2>
+      
+  <!-- burtguuleh heseg -->
+<div 
+  id="loginBox" 
+  class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-90  ">
+  
+  <div id="loginContent" class="p-8 bg-gray-900 bg-opacity-95 rounded-2xl shadow-2xl w-80 relative  duration-300">
+    <!-- butsah button -->
+    <button 
+      onclick="hideLogin()" 
+      class="absolute top-2 ml-[240px] text-gray-400 hover:bg-red-500 text-xl">✖</button>
+
+    <div class="flex items- justify-center">
+      <h2 class="text-red-500 font-bold mb-4 text-4xl">Hello World</h2>
     </div>
+
     <form id="burtguuleh" class="flex flex-col space-y-4">
-      <input type="text" placeholder="Username" id="ner" class="p-2 bg-gray-500 border border-gray-400 rounded">
-      <input type="password" placeholder="Password" id="pass" class="p-2 bg-gray-500 border border-gray-400 rounded">
-      <input type="email" placeholder="Email" id="email" class="p-2 bg-gray-500  border border-gray-400 rounded">
-      <button type="submit" class="p-2 mt-4 bg-red-500 text-black font-semibold rounded-xl hover:bg-green-500">
+      <input type="text" placeholder="Username" id="ner" class="p-2 bg-gray-800 border border-gray-600 rounded text-white">
+      <input type="password" placeholder="Password" id="pass" class="p-2 bg-gray-800 border border-gray-600 rounded text-white">
+      <input type="email" placeholder="Email" id="email" class="p-2 bg-gray-800 border border-gray-600 rounded text-white">
+      <button type="submit" class="p-2 mt-4 bg-red-500 text-white font-semibold rounded-xl hover:bg-green-500 transition">
         Log in
       </button>
     </form>
   </div>
+</div>
 
 <!-- zurag heseg-->
 <div class="w-1/2 flex justify-center items-center "><img src="3dmodel.png" alt=""></div>

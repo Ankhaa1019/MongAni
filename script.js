@@ -13,4 +13,31 @@
         alert("Бүх талбарыг бөглөнө үү!");
       }
     });
+ function showlogin() {
+  const loginBox = document.getElementById("loginBox");
+  const loginContent = document.getElementById("loginContent");
+
+  // show overlay
+  loginBox.classList.remove("hidden");
+
+  // animate popup
+  setTimeout(() => {
+    loginContent.classList.remove("scale-95", "opacity-0");
+    loginContent.classList.add("scale-100", "opacity-100");
+  }, 10);
+}
+
+function hideLogin() {
+  const loginBox = document.getElementById("loginBox");
+  const loginContent = document.getElementById("loginContent");
+
+  // hide with animation
+  loginContent.classList.add("scale-95", "opacity-0");
+  setTimeout(() => {
+    loginBox.classList.add("hidden");
+  }, 200);
+}
+
+      
+    
   
