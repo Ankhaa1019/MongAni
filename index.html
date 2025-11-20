@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AnimeFlow</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="script.js" defer></script>
+</head>
+<body class="m-0 p-0 bg-gray-900 text-white">
+
+<!-- HEADER -->
+<header class="absolute z-10 w-full h-20 flex justify-between items-center px-6">
+  <h1 class="text-red-400 text-4xl">AnimeFlow</h1>
+  <nav class="flex gap-10 text-xl">
+    <a href="#catigor" class="hover:text-red-500">catigor</a>
+    <a href="#about" class="hover:text-red-500">about</a>
+    <a href="#home" class="hover:text-red-500">home</a>
+  </nav>
+  <button class="px-6 py-2 bg-red-400 rounded-full hover:bg-red-500 hover:text-gray-500">sign in</button>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="relative w-full h-screen bg-center bg-cover flex p-8 opacity-90 items-center" style="background-image:url('tokyo.jpg');">
+  <div class="flex flex-col gap-10 w-1/2">
+    <h1 class="text-6xl font-bold">Tokyo Ghoul</h1>
+    <p>Lorem ipsum dolor sit amet consectetur!</p>
+    <div class="flex gap-8">
+      <button onclick="showlogin()" class="px-12 py-2 bg-red-400 rounded-full hover:bg-red-500 hover:text-gray-500">log in</button>
+      <button class="px-14 py-2 bg-red-400 rounded-full hover:bg-red-500 hover:text-gray-500">try</button>
+    </div>
+  </div>
+
+  <div class="w-1/2 flex justify-center items-center"><img src="3dmodel.png" alt=""></div>
+</div>
+
+<!-- LOGIN POPUP -->
+<div id="loginBox" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-90">
+  <div id="loginContent" class="p-8 bg-gray-900 rounded-2xl shadow-2xl w-80 relative scale-95 opacity-0 transition duration-300">
+    <button onclick="hideLogin()" class="absolute top-2 right-2 text-gray-400 hover:bg-red-500 text-xl">✖</button>
+    <h2 class="text-red-500 font-bold mb-4 text-4xl text-center">Hello World</h2>
+    <form id="burtguuleh" class="flex flex-col space-y-4">
+      <input type="text" placeholder="Username" id="ner" class="p-2 bg-gray-800 border border-gray-600 rounded text-white">
+      <input type="password" placeholder="Password" id="pass" class="p-2 bg-gray-800 border border-gray-600 rounded text-white">
+      <input type="email" placeholder="Email" id="email" class="p-2 bg-gray-800 border border-gray-600 rounded text-white">
+      <button type="submit" class="p-2 mt-4 bg-red-500 text-white rounded-xl hover:bg-green-500 transition">Log in</button>
+    </form>
+  </div>
+</div>
+
+<!-- UPLOAD VIDEO -->
+<section class="py-16 flex flex-col items-center w-full">
+  <h2 class="text-4xl font-bold text-red-400 mb-8">Upload your video</h2>
+
+  <form id="uploadForm" class="flex flex-col items-center space-y-6 w-full max-w-md bg-gray-800 p-8 rounded-2xl shadow-lg">
+    <input type="file" name="video" accept="video/*" class="file:py-2 file:px-4 file:rounded-full file:bg-red-400 file:text-white hover:file:bg-red-500">
+    <video id="traailer" controls class="w-full rounded-xl"></video>
+    <button type="submit" class="px-8 py-2 bg-red-500 rounded-full hover:bg-green-500">Upload</button>
+  </form>
+</section>
+
+<!-- UPLOADED VIDEOS GRID -->
+<section class="bg-gray-900 text-white py-16 flex flex-col items-center w-full">
+  <h2 class="text-4xl font-bold text-red-400 mb-8">Uploaded Videos</h2>
+  <div id="videoList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-11/12"></div>
+</section>
+
+</body>
+</html>
